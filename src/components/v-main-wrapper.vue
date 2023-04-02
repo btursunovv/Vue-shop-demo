@@ -1,6 +1,5 @@
 <template>
     <div class="main-wrapper">
-     
     <v-catalog />
     <v-cart 
         v-if="CART.length"
@@ -23,9 +22,7 @@
         },
         props: {},
         data() {
-            return {
-                title: 'Main-wrapper'
-            }
+            
         },
         computed: {
             ...mapGetters([

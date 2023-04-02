@@ -30,7 +30,7 @@ export default {
     addToCart() {
       this.$emit('addToCart', this.product_data)
     }
-  }
+  },
 }
 
 </script>
