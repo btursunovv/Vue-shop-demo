@@ -3,7 +3,7 @@
         <img class="v-catalog-item__image" :src=" require('../assets/images/' + product_data.image)" alt="">
         <p class="v-catalog-item__name">{{product_data.name}}</p>
         <p class="v-catalog-item__price">Price: {{product_data.price}}</p>
-        <button 
+        <button
           @click="addToCart" 
           class="v-catalog-item__cart_btn btn">
           Add to cart
@@ -48,6 +48,19 @@ export default {
     margin-bottom: 16px;
     &__image {
       width: 100px;
+      margin-bottom: 10px;
+    }
+    &__name {
+      margin-bottom: 8px;
+    }
+    &__price {
+      margin-bottom: 8px;
+    }
+    &__cart_btn {
+      border: 0px solid #000;
+      padding: 10px;
+      background-color: #1ca345;
+      color: #fff;
     }
   }
 </style>

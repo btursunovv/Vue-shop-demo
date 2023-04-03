@@ -1,14 +1,18 @@
 <template lang="">
     <div class="v-cart-item">
-        <div>123</div>
+        
         <img class="v-cart-item__images" :src=" require('../assets/images/' + cart_item_data.image)" alt="">
         <div class="v-cart-item__info">
             <p>{{cart_item_data.name}}</p>
-            <p>{{cart_item_data.price}}</p>
+            <p>{{cart_item_data.price}}₸</p>
             <p>{{cart_item_data.article}}</p>
         </div>
-        <div class="v-cart-item__quantity">{{cart_item_data.quantity}}</div>
-        <button @click='deleteFromCart'>Delete</button>
+        <!-- <div class="v-cart-item__quantity">{{cart_item_data.quantity}}</div> -->
+        <button 
+            class='v-cart-item__btn' 
+            @click='deleteFromCart'>
+            Delete
+        </button>
     </div>
 </template>
 
@@ -48,5 +52,11 @@ export default {
             padding: 16px;
             margin-bottom: 16px;
         }
+        &__btn {
+            border: 0px solid #000;
+            padding: 10px;
+            background-color: #cf2c0f;
+            color: #fff;
+    }
     }
 </style>
