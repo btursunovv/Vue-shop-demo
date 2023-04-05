@@ -1,6 +1,6 @@
 <template>
     <div class="v-catalog-item">
-        <img class="v-catalog-item__image" :src=" require('../assets/images/' + product_data.image)" alt="">
+        <img class="v-catalog-item__image" :src="API_BASE_URL + /static/ + product_data.image" alt="">
         <p class="v-catalog-item__name">{{product_data.name}}</p>
         <p class="v-catalog-item__price">Price: {{product_data.price}}</p>
         <button
@@ -12,6 +12,8 @@
 </template>
 
 <script>
+
+import { API_BASE_URL } from '@/config';
 
 export default {
   name: 'v-catalog-item',
@@ -25,6 +27,11 @@ export default {
         return {}
       }
     }
+  },
+  data () {
+        return {
+            API_BASE_URL
+        }
   },
   methods: {
     addToCart() {

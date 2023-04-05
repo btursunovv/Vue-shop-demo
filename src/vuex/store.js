@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import axios from 'axios';
+import { API_BASE_URL } from '@/config';
 
 
 const store = createStore({
@@ -22,7 +23,7 @@ const store = createStore({
 
   actions: {
     GET_PRODUCTS_FROM_API({commit}) {
-        return axios('http://localhost:3000/products', {
+      return axios(`${API_BASE_URL}/products`, {
             method: "GET"
         })
         .then ((products) => {
