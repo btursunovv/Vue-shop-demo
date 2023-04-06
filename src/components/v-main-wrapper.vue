@@ -1,34 +1,28 @@
 <template>
-    <div class="main-wrapper">
-        <!-- <keep-alive> -->
-            <router-view></router-view>
-        <!-- </keep-alive> -->
-    </div>  
-</template>    
+  <div class="main-wrapper">
+    <!-- <keep-alive> -->
+    <router-view></router-view>
+    <!-- </keep-alive> -->
+  </div>
+</template>
 
 <script>
+export default {
+  name: "Main-wrapper",
+  props: {},
 
-      export default {
-        name: 'Main-wrapper',
-        props: {},
+  data() {},
 
-        data() {
-        },
+  computed: {},
 
-        computed: {
-        },
-
-        methods: {},
-        watch: {},
-
-    }
-
+  methods: {},
+  watch: {},
+};
 </script>
 
-
 <style>
-    .main-wrapper {
-        max-width: 900px;
-        margin: 0 auto;
-    }
+.main-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
 </style>
